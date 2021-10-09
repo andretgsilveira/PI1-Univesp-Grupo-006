@@ -1,34 +1,5 @@
-.app {
-    background: #f1f1f1;
-    display: grid;
-    font-family: Arial, Helvetica, sans-serif;
-    grid-template-areas: 
-        "header"
-        "content"
-        "footer";
-    grid-template-columns: auto;
-    grid-template-rows: 50px 100vh auto;
-}
-
-.header {
-    grid-area: header;
-}
-
-.content {
-    grid-area: content;
-}
-
-.footer {
-    grid-area: footer;
-}
-
-aside img {
-    border-radius: 100px;
+.imagem-principal {
     width: 300px;
     height: auto;
-}
-aside div {
-    padding: 20px 90px;
-    text-align: left;
-    justify-content: left;
+    border-radius: 20px;
 }
