@@ -9,3 +9,7 @@ def create_app():
         return render_template('index.html')
 
     return app
+
+'''Retire o comentario para testar via Pycharm'''
+'''test = create_app()'''
+'''test.run()'''
