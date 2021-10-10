@@ -26,8 +26,8 @@ testing = ["pytest", "pytest-cover", "coverage (>=5.0)"]
 
 [metadata]
 lock-version = "1.1"
-python-versions = "^3.9"
-content-hash = "eb90b3298e4065b3bfed62a269abd83ce4760206fcae683f4b93cdb14c0b14fa"
+python-versions = "3.9.2"
+content-hash = "6b6ae84b299cd11740c321bc3f8f1ffd19fefdd4e736a8ad4ecae9e4f36d4e10"
 
 [metadata.files]
 gunicorn = [
