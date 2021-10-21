@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Integrador</title>
+    <link href="../static/css/reset.css" rel="stylesheet">
+    <link href="../static/css/style.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script src="js/addons/rating.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href = "http://netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.css" rel = "stylesheet" >
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js" > </script>
+    <link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/bootstrap-star-rating/4.0.2/css/star-rating.min.css" />
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/bootstrap-star-rating/4.0.2/js/star-rating.min.js" > </script>
+    <style type="text/css">
+    #Titulo {
+        min-height: 50px;
+        }
+    #foto {
+        min-height: 250px;
+        }
+    #perfil {
+        border: 3px solid rgb(230, 35, 35);
+        min-height: 250px;
+        }
+    #avalgeral{
+        border: 3px solid rgb(62, 228, 40);
+        min-height: 250px;
+    }
+    #avalpessoal{
+        border: 3px solid rgb(81, 40, 228);
+        min-height:400px; 
+    }
+    #descricao{
+        border: 3px solid rgb(228, 40, 156);
+        min-height: 400px;
+    }
+    #dados{
+        border: 3px solid rgb(194, 138, 34);
+        min-height: 400px;
+    }
+    @media screen and (max-widght: 576px) {
+        #foto{
+            height: 120px;
+        }
+        #perfil{
+            height: 120px;
+        } 
+        #avalgeral{
+            height: 120px;
+        }
+        
+        .checked {
+            color: orange;
+        }
+               
+    }
+    </style>
+
+    
+
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row justify-content-between">
+            <div id=titulo class="col-sm-12 col-xs-12">
+                <h1><center>Serviços de Entregas João Pedro</center></h1>
+        </div>
+        <div class="row justify-content-between"></div>    
+            <div id=foto class="col-sm-3 col-xs-12">
+                <center><img src="../static/imagens/MBAJ9519.JPG" width="100px" class="rounded-circle" aria-hidden="true"></center>
+                <br/>
+                <h2><center>João Pedro</center></h2>
+            </div> 
+            <div id=perfil class="col-sm-6 col-xs-12">
+            <h1><center>Titulo do perfil</center></h1>
+            
+            </div>
+            <div id=avalgeral class="col-sm-3 col-xs-12">
+             <center>Avaliação geral</center>
+            </div>          
+        </div>
+        <div class="row justify-content-lg-between">
+            <div id=avalpessoal class="col-sm-3 col-xs-12">
+                  <h2> Avaliação </h2>
+                  <br/>
+                  <label for = "input-2" class = "control-label" > Atendimento: </label>
+                  <smal><input id = "input-2" name = "input-2" class = "rating rating-loading" data-min = "0" data-max = "5" data-step = "0.1" value = "2" ></smal>
+                </div> 
+            <div id=descricao class="col-sm-6 col-xs-12">
+                
+            </div>
+            <div id=dados class="col-sm-3 col-xs-12">
+
+            </div>          
+        </div>
+    </div>
+    
+    <script>
+
+        $ ( "# input-id" ). classificação ();
+
+    </script>
+
+</body>
+</html>

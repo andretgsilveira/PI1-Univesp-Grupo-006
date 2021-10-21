@@ -6,10 +6,11 @@ def create_app():
 
     @app.route('/')
     def index():
-        return render_template('index.html')
+        # return render_template('index.html')
 
+        return render_template('testeBootstrp2.html')
     return app
 
 '''Retire o comentario para testar via Pycharm'''
-'''test = create_app()'''
-'''test.run()'''
+# test = create_app()
+# test.run()

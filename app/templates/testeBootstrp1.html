@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Integrador</title>
+    <link href="../static/css/reset.css" rel="stylesheet">
+    <link href="../static/css/style.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script src="js/addons/rating.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href = "http://netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.css" rel = "stylesheet" >
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js" > </script>
+    <link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/bootstrap-star-rating/4.0.2/css/star-rating.min.css" rel="stylesheet" type="text/css" />
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/bootstrap-star-rating/4.0.2/js/star-rating.min.js" > </script>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <style type="text/css">
+    #Titulo {
+        max-height: 100px;
+        }
+    #foto {
+        min-height: 250px;
+        }
+    #perfil {
+        border: 3px solid rgb(230, 35, 35);
+        min-height: 250px;
+        }
+    #avalgeral{
+        border: 3px solid rgb(62, 228, 40);
+        min-height: 250px;
+    }
+    #avalpessoal{
+        min-height:400px; 
+    }
+    #descricao{
+        border: 3px solid rgb(228, 40, 156);
+        min-height: 400px;
+    }
+    #dados{
+        border: 3px solid rgb(194, 138, 34);
+        min-height: 400px;
+    }
+    @media screen and (max-widght: 576px) {
+        #foto{
+            height: 120px;
+        }
+        #perfil{
+            height: 120px;
+        } 
+        #avalgeral{
+            height: 120px;
+        }
+        
+        @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200&display=swap');
+
+html,
+body {
+    height: 100%
+}
+
+body {
+    display: grid;
+    place-items: center;
+    font-family: 'Manrope', sans-serif;
+    background: #000
+}
+
+.cross {
+    padding: 10px;
+    color: #d6312d;
+    cursor: pointer;
+    font-size: 23px
+}
+
+.cross i {
+    margin-top: -5px;
+    cursor: pointer
+}
+
+.comment-box {
+    padding: 5px
+}
+
+.comment-area textarea {
+    resize: none;
+    border: 1px solid #ff0000
+}
+
+.form-control:focus {
+    color: #495057;
+    background-color: #fff;
+    border-color: #ffffff;
+    outline: 0;
+    box-shadow: 0 0 0 1px rgb(255, 0, 0) !important
+}
+
+.send {
+    color: #fff;
+    background-color: #ff0000;
+    border-color: #ff0000
+}
+
+.send:hover {
+    color: #fff;
+    background-color: #f50202;
+    border-color: #f50202
+}
+
+.rating {
+    display: inline-flex;
+    margin-top: -10px;
+    flex-direction: row-reverse
+}
+
+.rating>input {
+    display: none
+}
+
+.rating>label {
+    position: relative;
+    width: 28px;
+    font-size: 35px;
+    color: #ff0000;
+    cursor: pointer
+}
+
+.rating>label::before {
+    content: "\2605";
+    position: absolute;
+    opacity: 0
+}
+
+.rating>label:hover:before,
+.rating>label:hover~label:before {
+    opacity: 1 !important
+}
+
+.rating>input:checked~label:before {
+    opacity: 1
+}
+
+.rating:hover>input:checked~label:before {
+    opacity: 0.4
+}
+               
+    }
+    </style>
+
+    
+
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row justify-content-between">
+            <div id=titulo class="col-sm-12 col-xs-12">
+                <br/>
+                <h1><center>Serviços de Entregas João Pedro</center></h1>
+                <br/>
+        </div>
+        <div class="row justify-content-between"></div>    
+            <div id=foto class="col-sm-3 col-xs-12">
+                <center><img src="../static/imagens/MBAJ9519.JPG" width="120px" class="rounded-circle" aria-hidden="true"></center>
+                <br/>
+                <h2><center>João Pedro</center></h2>
+            </div> 
+            <div id=perfil class="col-sm-6 col-xs-12">
+            <h2><center>Titulo do perfil</center></h2>
+            
+            </div>
+            <div id=avalgeral class="col-sm-3 col-xs-12">
+             <center>Avaliação geral</center>
+            </div>          
+        </div>
+        <div class="row justify-content-between">
+
+            
+            <div id=avalpessoal class="col-sm-3 col-xs-12">
+            
+            
+            <div class="card-body text-center"> <img src=" https://i.imgur.com/d2dKtI7.png" height="80" width="80">
+                <div class="comment-box text-center">
+                    <h3>Deixe sua Avaliação:</h3>
+                    <div class="rating"> <input type="radio" name="rating" value="5" id="5"><label for="5">☆</label> <input type="radio" name="rating" value="4" id="4"><label for="4">☆</label> <input type="radio" name="rating" value="3" id="3"><label for="3">☆</label> <input type="radio" name="rating" value="2" id="2"><label for="2">☆</label> <input type="radio" name="rating" value="1" id="1"><label for="1">☆</label> </div>
+                    <div class="comment-area"> <textarea class="form-control" placeholder="Escreva aqui seu comentário..." rows="4"></textarea> </div>
+                    <div class="text-center mt-4"> <button class="btn btn-success send px-5"> Enviar <i class="fa fa-long-arrow-right ml-1"></i></button> </div>
+                </div>
+            </div>
+        </div>
+                    
+        
+            <div id=descricao class="col-sm-6 col-xs-12">
+                
+            </div>
+            <div id=dados class="col-sm-3 col-xs-12">
+
+            </div>          
+        </div>
+    </div>
+</div>
+   
+</body>
+</html>
