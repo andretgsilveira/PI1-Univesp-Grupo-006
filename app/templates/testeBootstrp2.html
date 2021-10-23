@@ -13,7 +13,7 @@
 <body>
 <div class="container-fluid">
     <div class="row justify-content-between">
-        <div id=titulo class="col-sm-12 col-xs-12" >
+        <div class="col-sm-12 col-xs-12 titulo" >
             <div class="cabecalho row">
                 <h1>
                     <center>Moto Frete Marcelo</center>
@@ -22,42 +22,45 @@
     </div>
 
     <div class="row justify-content-between"></div>    
-        <div id=foto class="col-sm-3 col-xs-12">
+        <div class="col-sm-3 col-xs-12 foto">
             <br/>
-            <center><img src="../static/imagens/MBAJ9519.JPG" width="120px" class="rounded-circle" aria-hidden="true"></center>
+                <img src="../static/imagens/MBAJ9519.JPG" width="120px" class="logo" aria-hidden="true">
             <br/>
-            <h2><center>Marcelo</center></h2>
+            <h2>Marcelo</h2>
         </div> 
-        <div id=perfil class="col-sm-6 col-xs-12">
+
+        <div class="col-sm-6 col-xs-12 perfil">
         <br/>
-        <h2><center>Titulo do perfil</center></h2>
+        <h2>Titulo do perfil</h2>
         
         </div>
-        <div id=avalgeral class="col-sm-3 col-xs-12">
-            <center>Avaliação geral</center>
+
+        <div class="col-sm-3 col-xs-12 avalgeral">
+            <p>Avaliação geral</p>
         </div>          
     </div>
 
     <div class="row justify-content-between">
         <div id=avalpessoal class="col-sm-3 col-xs-12">
-            <div class="card-body text-center"> <img src=" https://i.imgur.com/d2dKtI7.png" height="80" width="80">
+            <div class="card-body text-center"> <img src="../static/imagens/evaluetion.png" height="80" width="80">
                 <div class="comment-box text-center">
                     <h5>Deixe sua Avaliação:</h5>
                     <div class="rating col-xs-sm-12"> 
-                        <input type="radio" name="rating" value="5" id="5">
-                        <label for="5" class="star">☆</label> <input type="radio" name="rating" value="4" id="4">
-                        <label for="4" class="star">☆</label> <input type="radio" name="rating" value="3" id="3">
-                        <label for="3" class="star">☆</label> <input type="radio" name="rating" value="2" id="2">
-                        <label for="2" class="star">☆</label> <input type="radio" name="rating" value="1" id="1">
-                        <label for="1" class="star">☆</label>
+                        <label for="5">☆</label> <input type="radio" name="rating" value="5" id="5">
+                        <label for="4">☆</label> <input type="radio" name="rating" value="4" id="4">
+                        <label for="3">☆</label> <input type="radio" name="rating" value="3" id="3">
+                        <label for="2">☆</label> <input type="radio" name="rating" value="2" id="2">
+                        <label for="1">☆</label> <input type="radio" name="rating" value="1" id="1">
                     </div>
+
+                    <br>
 
                     <div class="comment-area"> 
                         <textarea class="form-control" placeholder="Escreva aqui seu comentário..." rows="4"></textarea> 
                     </div>
 
                     <div class="text-center mt-4"> 
-                        <button class="btn btn-success send px-5"> Enviar </button> 
+                        <button class="botao"> Enviar </button> 
                     </div>
                 </div>
             </div>
