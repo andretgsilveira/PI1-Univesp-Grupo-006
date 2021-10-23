@@ -23,7 +23,9 @@
     border: 3px solid rgb(194, 138, 34);
     min-height: 400px;
 }
-
+.star{
+    height: 20px;
+}
 .cabecalho{
 
     background-color: #60a7ee;
@@ -40,9 +42,12 @@
     }
 }
 .rating {
-display: flex;   
-flex-direction: row-reverse;
-justify-content: center
+    width: 100%;
+    height: 3vh;
+    margin: 5% 0;
+    display: flex;   
+    flex-direction: row-reverse;
+    justify-content: center
 }
 
 .rating>input {
@@ -51,8 +56,7 @@ justify-content: center
 
 .rating>label {
     position: relative;
-    width: 2em;
-    /* font-size: 2vw ; */
+    width: 2vw;
     color: #FFD600;
     cursor: pointer
 }

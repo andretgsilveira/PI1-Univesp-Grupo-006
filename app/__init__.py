@@ -12,5 +12,5 @@ def create_app():
     return app
 
 '''Retire o comentario para testar via Pycharm'''
-# test = create_app()
-# test.run()
+test = create_app()
+test.run(debug=True)

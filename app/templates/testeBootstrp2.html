@@ -8,65 +8,68 @@
     <link href="../static/css/reset.css" rel="stylesheet">
     <link href="../static/css/style.css" rel="stylesheet">
     <link href="../static/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-   
+
 </head>
 <body>
-    <div class="container-fluid">
-        <div class="row justify-content-between">
-            <div id=titulo class="col-sm-12 col-xs-12" >
-                
-                <div class="cabecalho row"><h1><center>Moto Frete Marcelo</center></h1>
-                </div>
-                
-        </div>
-        <div class="row justify-content-between"></div>    
-            <div id=foto class="col-sm-3 col-xs-12">
-                <br/>
-                <center><img src="../static/imagens/MBAJ9519.JPG" width="120px" class="rounded-circle" aria-hidden="true"></center>
-                <br/>
-                <h2><center>Marcelo</center></h2>
-            </div> 
-            <div id=perfil class="col-sm-6 col-xs-12">
-            <br/>
-            <h2><center>Titulo do perfil</center></h2>
-            
-            </div>
-            <div id=avalgeral class="col-sm-3 col-xs-12">
-             <center>Avaliação geral</center>
-            </div>          
-        </div>
-        <div class="row justify-content-between">
+<div class="container-fluid">
+    <div class="row justify-content-between">
+        <div id=titulo class="col-sm-12 col-xs-12" >
+            <div class="cabecalho row">
+                <h1>
+                    <center>Moto Frete Marcelo</center>
+                </h1>
+        </div>       
+    </div>
 
-            
-            <div id=avalpessoal class="col-sm-3 col-xs-12">
-                         
-            
+    <div class="row justify-content-between"></div>    
+        <div id=foto class="col-sm-3 col-xs-12">
+            <br/>
+            <center><img src="../static/imagens/MBAJ9519.JPG" width="120px" class="rounded-circle" aria-hidden="true"></center>
+            <br/>
+            <h2><center>Marcelo</center></h2>
+        </div> 
+        <div id=perfil class="col-sm-6 col-xs-12">
+        <br/>
+        <h2><center>Titulo do perfil</center></h2>
+        
+        </div>
+        <div id=avalgeral class="col-sm-3 col-xs-12">
+            <center>Avaliação geral</center>
+        </div>          
+    </div>
+
+    <div class="row justify-content-between">
+        <div id=avalpessoal class="col-sm-3 col-xs-12">
             <div class="card-body text-center"> <img src=" https://i.imgur.com/d2dKtI7.png" height="80" width="80">
                 <div class="comment-box text-center">
                     <h5>Deixe sua Avaliação:</h5>
                     <div class="rating col-xs-sm-12"> 
                         <input type="radio" name="rating" value="5" id="5">
-                        <label for="5">☆</label> <input type="radio" name="rating" value="4" id="4">
-                        <label for="4">☆</label> <input type="radio" name="rating" value="3" id="3">
-                        <label for="3">☆</label> <input type="radio" name="rating" value="2" id="2">
-                        <label for="2">☆</label> <input type="radio" name="rating" value="1" id="1">
-                        <label for="1">☆</label>
+                        <label for="5" class="star">☆</label> <input type="radio" name="rating" value="4" id="4">
+                        <label for="4" class="star">☆</label> <input type="radio" name="rating" value="3" id="3">
+                        <label for="3" class="star">☆</label> <input type="radio" name="rating" value="2" id="2">
+                        <label for="2" class="star">☆</label> <input type="radio" name="rating" value="1" id="1">
+                        <label for="1" class="star">☆</label>
                     </div>
 
-                    <div class="comment-area"> <textarea class="form-control" placeholder="Escreva aqui seu comentário..." rows="4"></textarea> </div>
-                    <div class="text-center mt-4"> <button class="btn btn-success send px-5"> Enviar <i class="fa fa-long-arrow-right ml-1"></i></button> </div>
+                    <div class="comment-area"> 
+                        <textarea class="form-control" placeholder="Escreva aqui seu comentário..." rows="4"></textarea> 
+                    </div>
+
+                    <div class="text-center mt-4"> 
+                        <button class="btn btn-success send px-5"> Enviar </button> 
+                    </div>
                 </div>
             </div>
         </div>
-                    
-        
-            <div id=descricao class="col-sm-6 col-xs-12">
                 
-            </div>
-            <div id=dados class="col-sm-3 col-xs-12">
-
-            </div>          
+    
+        <div id=descricao class="col-sm-6 col-xs-12">
+            
         </div>
+        <div id=dados class="col-sm-3 col-xs-12">
+
+        </div>          
     </div>
 </div>
    
