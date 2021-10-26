@@ -36,7 +36,7 @@ h2 {
     min-height:400px; 
 }
 
-#descricao{
+.rating-evaluations{
     border: 3px solid rgb(228, 40, 156);
     min-height: 400px;
 }
@@ -121,7 +121,7 @@ h2 {
     box-shadow: 0 0 .35em red !important;
 }
 
-@media screen and (max-widght: 576px) {
+@media (max-widght: 700px) {
     #foto{
         height: 120px;
     }

@@ -43,32 +43,49 @@
     <div class="row justify-content-between">
         <div id=avalpessoal class="col-sm-3 col-xs-12">
             <div class="card-body text-center"> <img src="../static/imagens/evaluetion.png" height="80" width="80">
-                <div class="comment-box text-center">
+                <form action="/rating" class="comment-box text-center" method="POST">
                     <h5>Deixe sua Avaliação:</h5>
                     <div class="rating col-xs-sm-12"> 
-                        <label for="5">☆</label> <input type="radio" name="rating" value="5" id="5">
-                        <label for="4">☆</label> <input type="radio" name="rating" value="4" id="4">
-                        <label for="3">☆</label> <input type="radio" name="rating" value="3" id="3">
-                        <label for="2">☆</label> <input type="radio" name="rating" value="2" id="2">
-                        <label for="1">☆</label> <input type="radio" name="rating" value="1" id="1">
+                        <input type="radio" name="rating" value="5" id="5">
+                        <label for="5">☆</label>
+
+                        <input type="radio" name="rating" value="4" id="4">
+                        <label for="4">☆</label>
+
+                        <input type="radio" name="rating" value="3" id="3">
+                        <label for="3">☆</label> 
+
+                        <input type="radio" name="rating" value="2" id="2">
+                        <label for="2">☆</label>
+                        
+                        <input type="radio" name="rating" value="1" id="1">
+                        <label for="1">☆</label>
+                        
+                        <input type="radio" name="rating" value="0" id="0" checked>
                     </div>
 
                     <br>
 
                     <div class="comment-area"> 
-                        <textarea class="form-control" placeholder="Escreva aqui seu comentário..." rows="4"></textarea> 
+                        <textarea class="form-control" placeholder="Escreva aqui seu comentário..." rows="4" name="comment"></textarea> 
                     </div>
 
-                    <div class="text-center mt-4"> 
-                        <button class="botao"> Enviar </button> 
-                    </div>
-                </div>
+                    <br><br>
+
+                    <button class="botao"> Enviar </button>
+                    
+                </form>
             </div>
         </div>
                 
     
-        <div id=descricao class="col-sm-6 col-xs-12">
-            
+        <div class="col-sm-6 col-xs-12 rating-evaluations">
+            <!-- Teste campo avaliação -->
+            {% if star_ranting or comment %}
+                <p> Numero de estrelas : {{ star_rating}}</p>
+                <p> Comentario </p>
+                {{ comment }}
+            {% endif %}
         </div>
         <div id=dados class="col-sm-3 col-xs-12">
 
