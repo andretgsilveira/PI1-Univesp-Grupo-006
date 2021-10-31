@@ -27,7 +27,7 @@ h2 {
 }
 
 .avalgeral{
-    border: 3px solid rgb(62, 228, 40);
+    /* border: 3px solid rgb(62, 228, 40); */
     min-height: 250px;
     text-align: center;
 }
@@ -37,12 +37,14 @@ h2 {
 }
 
 #descricao{
-    border: 3px solid rgb(228, 40, 156);
-    min-height: 400px;
+    border: 4px solid rgb(56, 87, 230)(48, 99, 238);
+    min-height: 200px;
+    background-color: #9cadbe;
+    box-shadow: 4px 4px 6px #888;
 }
 
 #dados{
-    border: 3px solid rgb(194, 138, 34);
+    /* border: 3px solid rgb(194, 138, 34); */
     min-height: 400px;
 }
 
@@ -132,4 +134,51 @@ h2 {
         height: 120px;
     }
 }
+
+.not-visible {
+    visibility: hidden;
+  }
+
+ .content {
+     width: 420px;
+     margin-top: 30px
+ }
+
+ .ratings {
+     background-color: #fff;
+     padding: 30px;
+     border: 1px solid rgba(0, 0, 0, 0.1);
+     box-shadow: 0px 5px 5px #E0E0E0
+ }
+
+ .product-rating {
+     font-size: 30px
+ }
+
+ .stars i {
+     font-size: 18px;
+     color: #dfcb1b
+ }
+
+ .rating-text {
+     margin-top: 5px
+ }
+
+ .whatsapp-link{
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 40px;
+    background-color: #25d366;
+    color: #fff;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 1px 1px 2px #888;
+    z-index: 1000;
+ }
    
+ .fa-whatsapp {
+    margin-top: 16px;
+ }

@@ -8,7 +8,7 @@ def create_app():
     def index():
         # return render_template('index.html')
 
-        return render_template('testeBootstrp2.html')
+        return render_template('testeBootstrp3.html')
     return app
 
 '''Retire o comentario para testar via Pycharm'''
