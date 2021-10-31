@@ -1,3 +1,4 @@
+
 .titulo {
     background: #60a7ee;
     max-height: 100px;
@@ -23,29 +24,37 @@ h2 {
 }
 
 .perfil {
-    min-height: 250px;
+    /* min-height: 250px; */
+    text-align: left;
 }
-
+.perfil > h4 {
+    margin-top: 10%;
+}
 .avalgeral{
     /* border: 3px solid rgb(62, 228, 40); */
-    min-height: 250px;
+    /* min-height: 250px; */
     text-align: center;
 }
 
 #avalpessoal{
-    min-height:400px; 
+    /* min-height:400px;  */
 }
 
 #descricao{
     border: 4px solid rgb(56, 87, 230)(48, 99, 238);
-    min-height: 200px;
+    /* min-height: 200px; */
     background-color: #9cadbe;
     box-shadow: 4px 4px 6px #888;
 }
 
+.carousel > h5 {
+    text-align: center;
+    margin-top: 15%;
+}
+
 #dados{
     /* border: 3px solid rgb(194, 138, 34); */
-    min-height: 400px;
+    /* min-height: 400px; */
 }
 
 .cabecalho{
@@ -123,18 +132,6 @@ h2 {
     box-shadow: 0 0 .35em red !important;
 }
 
-@media (max-widght: 700px) {
-    #foto{
-        height: 120px;
-    }
-    #perfil{
-        height: 120px;
-    } 
-    #avalgeral{
-        height: 120px;
-    }
-}
-
 .not-visible {
     visibility: hidden;
   }
@@ -145,6 +142,8 @@ h2 {
  }
 
  .ratings {
+     width: 100%;
+     box-sizing: border-box;
      background-color: #fff;
      padding: 30px;
      border: 1px solid rgba(0, 0, 0, 0.1);
@@ -182,3 +181,15 @@ h2 {
  .fa-whatsapp {
     margin-top: 16px;
  }
+
+ @media (max-widght: 700px) {
+    #foto{
+        height: 120px;
+    }
+    #perfil{
+        height: 120px;
+    } 
+    #avalgeral{
+        height: 120px;
+    }
+}

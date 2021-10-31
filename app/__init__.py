@@ -8,7 +8,14 @@ def create_app():
     def index():
         # return render_template('index.html')
 
-        return render_template('testeBootstrp3.html')
+        return render_template('index.html')
+
+    @app.route('/rating', methods=["POST"])
+    def rating():
+        star_rating = request.form.get("rating");
+        comment = request.form.get("comment")
+        return render_template('index.html', star_rating=star_rating, comment=comment)
+
     return app
 
 # Retire o comentario para testar via Pycharm
