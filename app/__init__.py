@@ -10,6 +10,12 @@ def create_app():
 
         return render_template('index.html')
 
+
+    @app.route('/contato')
+    def contato():
+        return render_template('contato.html')
+
+    
     @app.route('/rating', methods=["POST"])
     def rating():
         star_rating = request.form.get("rating");
