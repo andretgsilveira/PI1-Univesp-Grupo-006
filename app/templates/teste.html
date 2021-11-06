@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+
+  <form action="/teste" METHOD="POST">
+    <input name="rating" placeholder="star" style="border-color: black !important;">
+    <input name="comment" placeholder="comment" style="border-color: black !important;">
+    <button>Enviar</button>
+  </form>
+
+  {% for evaluation in evaluations %}
+
+  <h1>Star: {{ evaluation.star }}</h1>
+  <h1>Comment: {{ evaluation.evaluation }}</h1>
+  {% endfor %}
+{% endblock %}

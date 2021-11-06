@@ -44,7 +44,7 @@
       <div class="row justify-content-between">
         <div id=avalpessoal class="col-sm-3 col-xs-12">
           <div class="card-body text-center"> <img src="../static/imagens/evaluetion.png" height="80" width="80">
-            <div class="comment-box text-center">
+            <form action="/rating" METHOD="POST" class="comment-box text-center">
               <h5>Deixe sua Avaliação:</h5>
               <h4>
                 <div class="rating col-xs-sm-12">
@@ -59,52 +59,53 @@
               <br>
 
               <div class="comment-area">
-                <textarea class="form-control" placeholder="Escreva aqui seu comentário..." rows="4"></textarea>
+                <textarea class="form-control" placeholder="Escreva aqui seu comentário..." rows="4" name="comment" ></textarea>
               </div>
 
               <div class="text-center mt-4">
                 <button class="botao"> Enviar </button>
               </div>
-            </div>
+            </form>
           </div>
         </div>
 
 
         <div id=descricao class="col-sm-6 col-xs-12">
 
+          
+            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
 
-          <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-
-            <h5>Avaliação de nossos Clientes:</h5>
-
-            <div class="carousel-inner">
               
-              <!-- Estrutura de avaliações enviadas -->
-              <div class="carousel-item active">
-                <br>
-                <br>
-                <center><img src="../static/imagens/star4.png" height="35" width="150"></center>
-                <br>
-                <br>
-                <div class="comment-area">
-                  <strong><textarea class="form-control" readonly placeholder="Gostei muito do atendimento"
-                      rows="3"></textarea></strong>
-                </div>
-              </div>
+              <h5>Avaliação de nossos Clientes:</h5>
+
+              <div class="carousel-inner">
+
+                <!-- Estrutura de avaliações enviadas -->
+                {% for avaliacao in evaluations %}
+                  {% if avaliacao.id == 1 %}
+                    <div class="carousel-item active">
+                  {% else %}
+                    <div class="carousel-item">
+                  {% endif %}
+                    <center><h1>Star: {{ avaliacao.star }}</h1></center>
+                    <div class="comment-area">
+                      <strong><textarea class="form-control" readonly rows="3">{{ avaliacao.evaluation }}</textarea></strong>
+                    </div>
+                  </div>
+                {% endfor %}
+              </div>             
+
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
             </div>
-
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
-              data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
-              data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
-          </div>
-
 
         </div>
         <div id=dados class="col-sm-3 col-xs-12">
