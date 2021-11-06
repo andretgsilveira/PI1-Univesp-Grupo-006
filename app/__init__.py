@@ -15,7 +15,7 @@ def create_app():
     def contato():
         return render_template('contato.html')
 
-    
+
     @app.route('/rating', methods=["POST"])
     def rating():
         star_rating = request.form.get("rating");
@@ -25,5 +25,5 @@ def create_app():
     return app
 
 # Retire o comentario para testar via Pycharm
-# test = create_app()
-# test.run()
+test = create_app()
+test.run()
