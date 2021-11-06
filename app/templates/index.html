@@ -1,47 +1,5 @@
-<DOCTYPE html>
-  <html lang="pt-BR">
-
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- Bootstrap CSS -->
-
-    <link href="../static/css/reset.css" rel="stylesheet">
-    <link href="../static/css/style.css" rel="stylesheet">
-    <link href="../static/css/bootstrap.min.css.map" rel="stylesheet" type="text/css" />
-    <!-- <link href="../static/css/font-awesome.min.css" rel="stylesheet"> -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
-    <link href="../static/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    <script type="text/javascript" src="../static/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="../static/js/copiarTexto.js"></script>
-
-    <title>Moto Frete Marcelo</title>
-  </head>
-
-  <body>
-
-    <header>
-
-
-      <nav class="navbar navbar-light bg-info justify-content-between">
-        <div class="container-fluid">
-
-          <a class="navbar-brand text-white text-center" href="#">Moto Frete Marcelo</a>
-
-          <ul class="nav">
-            <li class="nav-item">
-              <a class="nav-link text-white" aria-current="page" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-white" href="/contato">Contato</a>
-            </li>
-          </ul>
-
-        </div>
-      </nav>
-
+{% extends 'base.html' %}
+{% block content %}
 
       <div class="row justify-content-between">
         <div class="col-sm-3 col-xs-12 foto">
@@ -86,7 +44,7 @@
       <div class="row justify-content-between">
         <div id=avalpessoal class="col-sm-3 col-xs-12">
           <div class="card-body text-center"> <img src="../static/imagens/evaluetion.png" height="80" width="80">
-            <div class="comment-box text-center">
+            <form action="/rating" METHOD="POST" class="comment-box text-center">
               <h5>Deixe sua Avaliação:</h5>
               <h4>
                 <div class="rating col-xs-sm-12">
@@ -101,80 +59,53 @@
               <br>
 
               <div class="comment-area">
-                <textarea class="form-control" placeholder="Escreva aqui seu comentário..." rows="4"></textarea>
+                <textarea class="form-control" placeholder="Escreva aqui seu comentário..." rows="4" name="comment" ></textarea>
               </div>
 
               <div class="text-center mt-4">
                 <button class="botao"> Enviar </button>
               </div>
-            </div>
+            </form>
           </div>
         </div>
 
 
         <div id=descricao class="col-sm-6 col-xs-12">
 
+          
+            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
 
-          <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+              
+              <h5>Avaliação de nossos Clientes:</h5>
 
-            <h5>Avaliação de nossos Clientes:</h5>
+              <div class="carousel-inner">
 
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <br>
-                <br>
-                <center><img src="../static/imagens/star4.png" height="35" width="150"></center>
-                <br>
-                <br>
-                <div class="comment-area">
-                  <strong><textarea class="form-control" readonly placeholder="Gostei muito do atendimento"
-                      rows="3"></textarea></strong>
-                </div>
+                <!-- Estrutura de avaliações enviadas -->
+                {% for avaliacao in evaluations %}
+                  {% if avaliacao.id == 1 %}
+                    <div class="carousel-item active">
+                  {% else %}
+                    <div class="carousel-item">
+                  {% endif %}
+                    <center><h1>Star: {{ avaliacao.star }}</h1></center>
+                    <div class="comment-area">
+                      <strong><textarea class="form-control" readonly rows="3">{{ avaliacao.evaluation }}</textarea></strong>
+                    </div>
+                  </div>
+                {% endfor %}
+              </div>             
 
-                <!-- <img src="..." class="d-block w-100" alt="..."> -->
-              </div>
-              <div class="carousel-item">
-
-                <br>
-                <br>
-                <center><img src="../static/imagens/star4.png" height="35" width="150"></center>
-                <br>
-                <br>
-                <div class="comment-area">
-                  <strong><textarea class="form-control" readonly placeholder="Atendimento super rápido, recomendo!"
-                      rows="3"></textarea></strong>
-                </div>
-
-                <!-- <img src="..." class="d-block w-100" alt="..."> -->
-              </div>
-              <div class="carousel-item">
-
-                <br>
-                <br>
-                <center><img src="../static/imagens/star4.png" height="35" width="150"></center>
-                <br>
-                <br>
-                <div class="comment-area">
-                  <strong><textarea class="form-control" readonly placeholder="Preço excelente!"
-                      rows="3"></textarea></strong>
-                </div>
-
-                <!-- <img src="..." class="d-block w-100" alt="..."> -->
-              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
             </div>
-
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
-              data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
-              data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
-          </div>
-
 
         </div>
         <div id=dados class="col-sm-3 col-xs-12">
@@ -189,11 +120,11 @@
             </center>
             <br>
             <center>
-              <h7>Segue abaixo o meu PIX (CPF):</h7>
+              <h7>Segue abaixo o meu PIX (Telefone):</h7>
             </center>
             <br>
             <center><strong>
-                <h8 class="text-success">345.753.638-47</h8>
+                <h8 class="text-success">(11)98848-9617</h8>
               </strong></center>
 
             <center><input class="visually-hidden" type="text" readonly id="link" name="link" value="34575363847">
@@ -201,7 +132,7 @@
           </div>
           <br>
           <div>
-            <center><button type="button" class="btn btn-primary" onClick="copiarTexto()">Copiar CPF</button></center>
+            <center><button type="button" class="btn btn-primary" onClick="copiarTexto()">Copiar PIX</button></center>
           </div>
           <!-- <h9><strong>Para contato segue o meu WhtasApp</strong></h9> -->
           <a class="whatsapp-link"
@@ -215,30 +146,4 @@
       </div>
 
 
-    </header>
-
-    <section>
-
-    </section>
-
-    <footer>
-
-
-    </footer>
-
-    <!-- Optional JavaScript; choose one of the two! -->
-
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"> -->
-
-
-    <!-- </script> -->
-
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-
-    <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script> -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script> -->
-
-  </body>
-
-  </html>
+{% endblock %}
