@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request, redirect
 from flask_sqlalchemy import SQLAlchemy
+from sqlalchemy import func
 from datetime import datetime
 
 from werkzeug.utils import redirect
@@ -19,10 +20,28 @@ def create_app():
         def __repr__(self):
             return '<ID %r>' %self.id
 
+    @app.route('/manage')
+    def manage():
+        evaluations = Rating.query.order_by(Rating.date_created)
+        return render_template('manage.html', evaluations=evaluations)
+
+    @app.route('/delete/<int:id>')
+    def delete(id):
+        commentDelete = Rating.query.get_or_404(id)
+        
+        try:
+            db.session.delete(commentDelete)
+            db.session.commit()
+            return redirect('/manage')
+        except:
+            return "Não foi possivel deletar o comentario"
+
     @app.route('/')
     def index():
+        ratingAvg = db.session.query(func.avg(Rating.star)).scalar()
+        ratingLength = db.session.query(func.max(Rating.id)).scalar()
         evaluations = Rating.query.order_by(Rating.date_created)
-        return render_template('index.html', evaluations=evaluations)
+        return render_template('index.html', evaluations=evaluations, ratingLength=ratingLength, ratingAvg=ratingAvg)
 
     @app.route('/contato')
     def contato():
