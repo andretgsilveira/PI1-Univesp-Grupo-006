@@ -39,6 +39,7 @@ def create_app():
     @app.route('/')
     def index():
         ratingAvg = db.session.query(func.avg(Rating.star)).scalar()
+        ratingAvg = round(ratingAvg, 1)
         ratingLength = db.session.query(func.max(Rating.id)).scalar()
         evaluations = Rating.query.order_by(Rating.date_created)
         return render_template('index.html', evaluations=evaluations, ratingLength=ratingLength, ratingAvg=ratingAvg)
