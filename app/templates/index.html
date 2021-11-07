@@ -97,7 +97,13 @@
                     <div class="carousel-item">
                   {% endif %}
 
-                    <center><h1>Star: {{ avaliacao.star }}</h1></center>
+                    <div class="rating-box">
+                      {% for number in range(avaliacao.star) %}
+                      <label class="rating-comment">&#9733;</label>
+                      {% endfor %}
+                    </div>
+                  
+                    
                     <div class="comment-area">
                       <strong><textarea class="comments" readonly rows="3">{{ avaliacao.evaluation }}</textarea></strong>
                     </div>
