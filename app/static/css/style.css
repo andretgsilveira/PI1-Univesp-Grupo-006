@@ -30,13 +30,12 @@ h2 {
     margin-top: 10%;
 }
 .avalgeral{
-    /* border: 3px solid rgb(62, 228, 40); */
-    /* min-height: 250px; */
+    min-height: 250px;
     text-align: center;
 }
 
 #avalpessoal{
-    /* min-height:400px;  */
+    min-height:400px; 
 }
 
 #descricao{
@@ -45,15 +44,32 @@ h2 {
     background-color: #9cadbe;
     box-shadow: 4px 4px 6px #888;
 }
+.carousel {
+    padding: 50px;
+}
 
 .carousel > h5 {
     text-align: center;
-    margin-top: 15%;
+    margin-top: 5%;
+    margin-bottom: 15%;
+}
+.carousel-item {
+    align-items: center;
+}
+
+.carousel-item .comments {
+    display: block;
+    border-radius: 5px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    outline: 0;
+    box-shadow: 5px 5px 5px rgba(60, 60, 60, 0.5) ;
 }
 
 #dados{
-    /* border: 3px solid rgb(194, 138, 34); */
-    /* min-height: 400px; */
+    min-height: 400px;
 }
 
 .cabecalho{
@@ -106,7 +122,7 @@ h2 {
     padding: 5px
 }
 
-.comment-area textarea {
+.comment-area .comment {
     resize: none;
     border: 1px solid rgba(235, 59, 90,.5)
 }
