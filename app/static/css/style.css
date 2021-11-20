@@ -231,3 +231,11 @@ h2 {
         height: 120px;
     }
 }
+
+.contato {
+    margin: 0 auto;
+}
+
+.contato > p {
+    text-align: center;
+}
