@@ -36,17 +36,16 @@ def create_app():
         except:
             return "Não foi possivel deletar o comentario"
 
+    @app.route('/contato')
+    def contato():
+        return render_template('contato.html')
+
     @app.route('/')
     def index():
         ratingAvg = db.session.query(func.avg(Rating.star)).scalar()
         ratingLength = db.session.query(func.max(Rating.id)).scalar()
         evaluations = Rating.query.order_by(Rating.date_created)
         return render_template('index.html', evaluations=evaluations, ratingLength=ratingLength, ratingAvg=ratingAvg)
-
-    @app.route('/contato')
-    def contato():
-        return render_template('contato.html')
-        
 
     @app.route('/rating', methods=["POST", "GET"])
     def rating():
