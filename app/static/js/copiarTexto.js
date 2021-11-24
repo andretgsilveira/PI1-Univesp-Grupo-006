@@ -2,5 +2,5 @@ function copiarTexto() {
     var textoCopiado = document.getElementById("link");
     textoCopiado.select();
     document.execCommand("Copy");
-    alert("Texto Copiado: " + textoCopiado.value);
+    alert("Chave Pix Copiada: " + textoCopiado.value);
 }
